@@ -1,0 +1,33 @@
+@use "../util" as u;
+
+.header {
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+
+    &--left {
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      gap: 15px;
+
+      a {
+        display: block;
+      }
+    }
+
+    &--right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}
+
+.avatar-img {
+  img {
+    height: 1.625rem;
+    width: 1.5rem;
+  }
+}
