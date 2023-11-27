@@ -56,8 +56,10 @@
 			const increase = document.querySelector(".increase-js");
 
 			increase.addEventListener("click", () => {
-				amount++;
-				result.innerHTML = amount;
+				if (amount < 0 || amount < 10) {
+					amount++;
+					result.innerHTML = amount;
+				}
 			});
 		};
 
@@ -69,7 +71,8 @@
 				if (amount > 0) {
 					amount--;
 					result.innerHTML = amount;
-				}
+				};
+
 			});
 		};
 
