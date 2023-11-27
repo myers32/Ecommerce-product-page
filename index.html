@@ -15,27 +15,32 @@
 
 <body>
 
+  <nav class="mobile__menu container">
+    <div class="mobile__menu--close">
+      <a href="#" class="closeMobile-js">
+        <img src="images/icon-close.svg" alt="Close menu">
+      </a>
+    </div>
+
+    <div class="mobile__menu--links">
+      <a href="#">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
   <header class="header">
     <nav class="header__nav container">
 
-      <div class="mobile__menu hide">
-
-        <div class="mobile__menu--close">
-          <img src="images/icon-close.svg" alt="Close menu">
-        </div>
-
-        <div class="mobile__menu--links">
-          <a href="#">Collections</a>
-          <a href="#">Men</a>
-          <a href="#">Women</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-        </div>
-      </div>
-
       <div class="header__nav--logo">
-        <a href="#"><img src="images/icon-menu.svg" alt="Menu"></a>
-        <a href="#"><img src="images/logo.svg" alt="Logo"></a>
+        <a href="#" class="openMobile-js">
+          <img src="images/icon-menu.svg" alt="Menu">
+        </a>
+        <a href="#">
+          <img src="images/logo.svg" alt="Logo">
+        </a>
       </div>
 
       <div class="header__nav--cart">
