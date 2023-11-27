@@ -1,0 +1,30 @@
+.cart {
+  &__display {
+    position: absolute;
+    width: calc(100% - 12px);
+    margin: 5px;
+    top: 8%;
+    z-index: 1;
+    background-color: white;
+    border-radius: 10px;
+
+    &--title {
+      h4 {
+        padding-left: 30px;
+      }
+      border-bottom: 1px solid var(--grayishBlue);
+    }
+    &--content {
+      display: flex;
+      height: 30vh;
+      box-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.2);
+
+      p {
+        align-self: center;
+        margin: 0 auto;
+        color: var(--darkGrayishBlue);
+        font-weight: bold;
+      }
+    }
+  }
+}
