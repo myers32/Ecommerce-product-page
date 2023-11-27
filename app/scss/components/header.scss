@@ -30,3 +30,15 @@
     width: 1.5rem;
   }
 }
+
+.cart-items {
+  position: absolute;
+  padding: 0 7px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: var(--orange);
+  border-radius: 10px;
+}
