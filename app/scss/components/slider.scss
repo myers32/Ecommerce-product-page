@@ -7,11 +7,13 @@
     margin: auto;
   }
 
-  &__image {
-    // display: none;
+  &__images {
+    &--image {
+      display: none;
 
-    img {
-      width: 100%;
+      img {
+        width: 100%;
+      }
     }
 
     &--number {
@@ -55,4 +57,8 @@
   &__nextBtn:hover {
     background-color: rgba(0, 0, 0, 0.6);
   }
+}
+
+.main {
+  display: block;
 }
