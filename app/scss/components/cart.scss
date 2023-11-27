@@ -7,16 +7,19 @@
     z-index: 1;
     background-color: white;
     border-radius: 10px;
+    transform: translateY(-130%);
+    transition: transform 700ms ease;
 
     &--title {
       h4 {
         padding-left: 30px;
       }
+
       border-bottom: 1px solid var(--grayishBlue);
     }
     &--content {
       display: flex;
-      height: 30vh;
+      height: 25vh;
       box-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.2);
 
       p {
@@ -27,4 +30,8 @@
       }
     }
   }
+}
+
+.active {
+  transform: translateY(0);
 }
