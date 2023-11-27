@@ -1,0 +1,23 @@
+.description {
+  &__container {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  &__label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: var(--orange);
+    letter-spacing: 0.0625rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin-top: 0.875rem;
+  }
+
+  p {
+    color: var(--darkGrayishBlue);
+  }
+}
