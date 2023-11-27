@@ -56,10 +56,12 @@
 			const increase = document.querySelector(".increase-js");
 
 			increase.addEventListener("click", () => {
+
 				if (amount < 0 || amount < 10) {
 					amount++;
 					result.innerHTML = amount;
-				}
+				};
+				
 			});
 		};
 
