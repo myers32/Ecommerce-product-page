@@ -133,12 +133,27 @@
 		cartAmountDisplay();
 	};
 
+	const cart = () => {
+
+		const toggleCart = () => {
+			const cartBtn = document.querySelector(".cartIcon-js");
+			const cartDisplay = document.querySelector(".cart__display");
+
+			cartBtn.addEventListener("click", () => {
+				cartDisplay.classList.toggle("active");
+			});
+		};
+
+		toggleCart();
+	};
+
 	const init = () => {
 
 		slider();
 		counter();
 		sideMenu();
 		cartCountDisplay();
+		cart();
 	};
 	init();
 }
