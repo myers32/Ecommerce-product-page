@@ -116,11 +116,29 @@
 		init();
 	};
 
+	const cartCountDisplay = () => {
+
+		const cartAmountDisplay = () => {
+			const result = document.querySelector(".result-js");
+			const addItems = document.querySelector(".addItems");
+			const cartItems = document.querySelector(".cart-items");
+
+			addItems.addEventListener("click", () => {
+				if (Number(result.textContent) >= 0) {
+					cartItems.innerHTML = Number(result.textContent);
+				}
+			});
+		};
+
+		cartAmountDisplay();
+	};
+
 	const init = () => {
 
-		sideMenu();
 		slider();
 		counter();
+		sideMenu();
+		cartCountDisplay();
 	};
 	init();
 }
