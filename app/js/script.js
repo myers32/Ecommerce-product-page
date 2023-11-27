@@ -123,9 +123,12 @@
 			const addItems = document.querySelector(".addItems");
 			const cartItems = document.querySelector(".cart-items");
 
+
 			addItems.addEventListener("click", () => {
-				if (Number(result.textContent) >= 0) {
-					cartItems.innerHTML = Number(result.textContent);
+				const value = Number(result.textContent);
+
+				if (value >= 0) {
+					cartItems.innerHTML = value;
 				}
 			});
 		};
