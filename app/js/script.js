@@ -46,8 +46,6 @@
 		init();
 	};
 
-
-
 	const counter = () => {
 		let amount = 0;
 		let result = document.querySelector(".result-js");
@@ -55,20 +53,22 @@
 		const increaseAmount = () => {
 			const increase = document.querySelector(".increase-js");
 
-			increase.addEventListener("click", () => {
+			increase.addEventListener("click", (e) => {
+				e.preventDefault();
 
 				if (amount < 0 || amount < 10) {
 					amount++;
 					result.innerHTML = amount;
 				};
-				
+
 			});
 		};
 
 		const decreaseAmount = () => {
 			const decrease = document.querySelector(".decrease-js");
 
-			decrease.addEventListener("click", () => {
+			decrease.addEventListener("click", (e) => {
+				e.preventDefault();
 
 				if (amount > 0) {
 					amount--;
@@ -78,10 +78,49 @@
 			});
 		};
 
-		decreaseAmount();
-		increaseAmount();
+		const init = () => {
+			decreaseAmount();
+			increaseAmount();
+		};
+
+		init();
 	};
 
-	slider();
-	counter();
+	const sideMenu = () => {
+		const mobileMenu = document.querySelector(".mobile__menu");
+		const body = document.querySelector("body");
+
+		const openMenu = () => {
+			const openButton = document.querySelector(".openMobile-js");
+
+			openButton.addEventListener("click", () => {
+				mobileMenu.classList.add("openedMenu");
+				body.classList.add("overflow");
+			});
+		};
+
+		const closeMenu = () => {
+			const closeButton = document.querySelector(".closeMobile-js");
+
+			closeButton.addEventListener("click", () => {
+				mobileMenu.classList.remove("openedMenu");
+				body.classList.remove("overflow");
+			});
+		};
+
+		const init = () => {
+			openMenu();
+			closeMenu();
+		};
+
+		init();
+	};
+
+	const init = () => {
+
+		sideMenu();
+		slider();
+		counter();
+	};
+	init();
 }
