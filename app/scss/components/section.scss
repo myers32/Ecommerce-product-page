@@ -37,6 +37,7 @@
       justify-content: space-between;
       background-color: var(--lightGrayishBlue);
       border-radius: 10px;
+      box-shadow: 0rem 0.1875rem 0.75rem rgba(0,0,0,.2);
 
       a {
         padding: 16px 20px;
@@ -59,6 +60,7 @@
       background-color: var(--orange);
       color: white;
       font-weight: bold;
+      box-shadow: 0rem 0.1875rem 0.75rem rgba(0,0,0,.2);
     }
 
     button:hover {
