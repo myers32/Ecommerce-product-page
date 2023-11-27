@@ -52,14 +52,20 @@
       justify-content: center;
       gap: 15px;
       align-items: center;
-      cursor: pointer;
+      width: 100%;
       border: none;
       border-radius: 10px;
       padding: 16px;
       background-color: var(--orange);
       color: white;
       font-weight: bold;
-      width: 100%;
+    }
+
+    button:hover {
+      cursor: pointer;
+      background-color: hsl(26, 100%, 60%);
+      transform: scale(1.05);
+      transition: all 400ms ease-in-out;
     }
   }
 }
