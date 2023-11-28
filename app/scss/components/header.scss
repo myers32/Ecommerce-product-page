@@ -1,3 +1,5 @@
+@use "../util" as u;
+
 .header {
   &__nav {
     display: flex;
@@ -5,21 +7,40 @@
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
 
+    @include u.breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 0.0625rem solid var(--grayishBlue);
+    }
+
     &--logo {
       align-items: center;
       justify-content: space-between;
       display: flex;
       gap: 0.9375rem;
-
-      a {
-        display: block;
-      }
     }
 
     &--cart {
       display: flex;
       align-items: center;
       gap: 1.25rem;
+    }
+
+    &--links {
+      a {
+        color: var(--darkGrayishBlue);
+        padding-left: 1.25rem;
+      }
+
+      a:first-child {
+        padding-left: 0;
+      }
+
+      a:nth-child(2) {
+        padding-left: 2.5rem;
+      }
     }
   }
 }
@@ -28,17 +49,34 @@
   img {
     height: 1.625rem;
     width: 1.5rem;
+
+    @include u.breakpoint-up(large) {
+      height: 3.125rem;
+      width: 3.125rem;
+    }
   }
 }
 
 .cart-items {
   position: absolute;
-  padding: 0 7px;
-  margin-bottom: 20px;
-  margin-left: 10px;
+  padding: 0 0.4375rem;
+  margin-bottom: 1.25rem;
+  margin-left: 0.625rem;
   color: white;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: bold;
   background-color: var(--orange);
-  border-radius: 10px;
+  border-radius: 0.625rem;
+}
+
+.hideForDesktop {
+  @include u.breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.hideForMobile {
+  @include u.breakpoint-down(medium) {
+    display: none;
+  }
 }
