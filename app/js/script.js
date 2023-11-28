@@ -129,6 +129,7 @@
 
 				if (value >= 0) {
 					cartItems.innerHTML = value;
+					renderCartDisplay();
 				}
 			});
 		};
@@ -138,8 +139,20 @@
 			const numberOfCartItems = Number(cartItems.textContent);
 
 			if (numberOfCartItems === 0) {
-				cartContent.innerHTML = `<p>Your cart is empty.</p>`;
-			}
+				cartContent.innerHTML =
+					`
+				<p>Your cart is empty.</p>
+				`;
+				return;
+			} else if (numberOfCartItems > 0) {
+				cartContent.innerHTML =
+					`
+				<p>Fall Limited Edition Sneakers</p>
+				<p>$125.00 x 3 <strong>$375.00</strong>
+				`;
+				return;
+			};
+			cartAmountDisplay();
 		};
 
 		cartAmountDisplay();
