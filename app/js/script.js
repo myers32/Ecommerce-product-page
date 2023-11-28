@@ -120,7 +120,7 @@
 		const cartItems = document.querySelector(".cart-items");
 		const cartContent = document.querySelector(".cartContent-js");
 
-		const cartAmountDisplay = () => {
+		const renderCartAmount = () => {
 			const result = document.querySelector(".result-js");
 			const addItems = document.querySelector(".addItems");
 
@@ -172,7 +172,6 @@
 		const deleteCartItems = () => {
 			document.addEventListener("click", function (e) {
 				const target = e.target.closest(".cart-deleteBtn");
-				const numberOfCartItems = Number(cartItems.textContent);
 
 				if (target) {
 					cartContent.innerHTML = `<p style="font-weight: bold;">Your cart is empty</p>`
@@ -182,7 +181,7 @@
 		}
 
 		deleteCartItems();
-		cartAmountDisplay();
+		renderCartAmount();
 		renderCartDisplay();
 	};
 
