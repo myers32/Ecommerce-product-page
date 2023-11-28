@@ -116,9 +116,9 @@
 		init();
 	};
 
-	const cartCountDisplay = () => {
-
+	const cartDisplay = () => {
 		const cartItems = document.querySelector(".cart-items");
+		const cartContent = document.querySelector(".cartContent-js");
 
 		const cartAmountDisplay = () => {
 			const result = document.querySelector(".result-js");
@@ -135,26 +135,53 @@
 		};
 
 		const renderCartDisplay = () => {
-			const cartContent = document.querySelector(".cartContent-js");
 			const numberOfCartItems = Number(cartItems.textContent);
 
 			if (numberOfCartItems === 0) {
 				cartContent.innerHTML =
 					`
-				<p>Your cart is empty.</p>
+				<p style="font-weight: bold;">Your cart is empty.</p>
 				`;
-				return;
+
 			} else if (numberOfCartItems > 0) {
 				cartContent.innerHTML =
 					`
-				<p>Fall Limited Edition Sneakers</p>
-				<p>$125.00 x 3 <strong>$375.00</strong>
-				`;
-				return;
+					<div class="cart-wrapper">
+
+					<img src="images/image-product-1-thumbnail.jpg" alt="Product image" class="cart-image">
+
+					<p class="cart-paragraph">Fall Limited Edition Sneakers $125.00 x ${numberOfCartItems} <strong class="cart-price">$${125 * numberOfCartItems}.00</strong></p>
+
+					<button class="cart-deleteBtn">
+					<img src="images/icon-delete.svg" alt="Product image" class="cart-deleteBtnImage">
+					</button>
+
+					</div>
+
+					<div class="cart-checkout">
+
+					<button class="cart-checkoutBtn">
+					Checkout
+					</button>
+
+					</div>
+					`;
 			};
-			cartAmountDisplay();
 		};
 
+		const deleteCartItems = () => {
+			document.addEventListener("click", function (e) {
+				const target = e.target.closest(".cart-deleteBtn");
+				const numberOfCartItems = Number(cartItems.textContent);
+
+				if (target) {
+					cartContent.innerHTML = `<p style="font-weight: bold;">Your cart is empty</p>`
+					cartItems.innerHTML = 0;
+				}
+			})
+		}
+
+		deleteCartItems();
 		cartAmountDisplay();
 		renderCartDisplay();
 	};
@@ -178,7 +205,7 @@
 		slider();
 		counter();
 		sideMenu();
-		cartCountDisplay();
+		cartDisplay();
 		cart();
 	};
 	init();
