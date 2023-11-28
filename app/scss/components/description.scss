@@ -12,12 +12,12 @@
     letter-spacing: 0.0625rem;
   }
 
+  &__text {
+    color: var(--darkGrayishBlue);
+  }
+
   h1 {
     font-size: 1.75rem;
     margin-top: 0.875rem;
-  }
-
-  p {
-    color: var(--darkGrayishBlue);
   }
 }
