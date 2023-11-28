@@ -1,13 +1,24 @@
+@use "../util" as u;
+
 .slider {
   &__container {
     max-width: 62.5rem;
     position: relative;
     margin: auto;
+
+    @include u.breakpoint-up(large) {
+      padding-top: 5.625rem;
+    }
   }
 
   &__images {
     &--image {
       display: none;
+
+      @include u.breakpoint-up(large) {
+        width: 27.8125rem;
+        height: 27.8125rem;
+      }
 
       img {
         width: 100%;
@@ -23,6 +34,10 @@
       padding: 0.875rem;
       color: white;
       user-select: none;
+
+      @include u.breakpoint-up(large) {
+        display: none;
+      }
     }
   }
 
