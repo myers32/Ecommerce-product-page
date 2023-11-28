@@ -118,11 +118,11 @@
 
 	const cartCountDisplay = () => {
 
+		const cartItems = document.querySelector(".cart-items");
+
 		const cartAmountDisplay = () => {
 			const result = document.querySelector(".result-js");
 			const addItems = document.querySelector(".addItems");
-			const cartItems = document.querySelector(".cart-items");
-
 
 			addItems.addEventListener("click", () => {
 				const value = Number(result.textContent);
@@ -133,7 +133,17 @@
 			});
 		};
 
+		const renderCartDisplay = () => {
+			const cartContent = document.querySelector(".cartContent-js");
+			const numberOfCartItems = Number(cartItems.textContent);
+
+			if (numberOfCartItems === 0) {
+				cartContent.innerHTML = `<p>Your cart is empty.</p>`;
+			}
+		};
+
 		cartAmountDisplay();
+		renderCartDisplay();
 	};
 
 	const cart = () => {
