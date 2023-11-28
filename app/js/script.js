@@ -173,7 +173,7 @@
 				const target = e.target.closest(".cart-deleteBtn");
 
 				if (target) {
-					cartContent.innerHTML = `<p style="font-weight: bold;">Your cart is empty</p>`
+					cartContent.innerHTML = `<p style="font-weight: bold;">Your cart is empty.</p>`
 					cartItems.innerHTML = 0;
 				}
 			})
