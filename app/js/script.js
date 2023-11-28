@@ -5,7 +5,6 @@
 		const totalImages = images.length;
 		let currentIndex = 0;
 
-
 		const nextImage = () => {
 			const next = document.querySelector(".next-js");
 
