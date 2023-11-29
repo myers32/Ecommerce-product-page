@@ -1,0 +1,10 @@
+@use "../util" as u;
+
+.mainContent {
+  @include u.breakpoint-up(large) {
+    display: flex;
+    padding: 0 1.5rem;
+    max-width: 69.375rem;
+    margin: 0 auto;
+  }
+}
