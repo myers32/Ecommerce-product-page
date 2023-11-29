@@ -46,7 +46,7 @@
   }
 
   &__thumbnails {
-    @include u.breakpoint-up {
+    @include u.breakpoint-up(large) {
       display: flex;
       justify-content: space-between;
       padding-top: 2.1875rem;
