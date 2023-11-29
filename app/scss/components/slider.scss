@@ -1,6 +1,13 @@
 @use "../util" as u;
 
 .slider {
+  @include u.breakpoint-up(large) {
+    display: flex;
+    padding: 0 24px;
+    max-width: 1110px;
+    margin: 0 auto;
+  }
+
   &__container {
     max-width: 62.5rem;
     position: relative;
@@ -22,6 +29,10 @@
 
       img {
         width: 100%;
+
+        @include u.breakpoint-up(large) {
+          border-radius: 20px;
+        }
       }
     }
 
