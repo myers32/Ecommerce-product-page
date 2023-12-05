@@ -1,3 +1,4 @@
+@use "../util" as u;
 .section {
   &__container {
   }
@@ -31,13 +32,20 @@
   &__cart {
     padding: 20px 0;
 
+    @include u.breakpoint-up(large) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
     &--counter {
       display: flex;
       align-items: center;
       justify-content: space-between;
       background-color: var(--lightGrayishBlue);
       border-radius: 10px;
-      box-shadow: 0rem 0.1875rem 0.75rem rgba(0,0,0,.2);
+      box-shadow: 0rem 0.1875rem 0.75rem rgba(0, 0, 0, 0.2);
 
       a {
         padding: 16px 20px;
@@ -46,6 +54,10 @@
 
     &--button {
       margin: 20px auto;
+
+      @include u.breakpoint-up(large){
+        width: 100%;
+      }
     }
 
     button {
