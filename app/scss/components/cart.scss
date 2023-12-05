@@ -1,3 +1,5 @@
+@use "../util" as u;
+
 .cart {
   &__display {
     position: absolute;
@@ -9,13 +11,18 @@
     border-radius: 10px;
     transform: translateY(-130%);
     transition: transform 700ms ease;
+    box-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.2);
 
+    @include u.breakpoint-up(large) {
+      max-width: 25%;
+      right: 10%;
+    }
     &--title {
       h4 {
         padding-left: 30px;
       }
 
-      border-bottom: 1px solid var(--grayishBlue);
+      border-bottom: 1px solid #ebebeb;
     }
     &--content {
       display: flex;
@@ -25,7 +32,6 @@
       gap: 40px;
       padding: 30px;
       height: 25vh;
-      box-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.2);
 
       p {
         margin: 0 auto;
@@ -80,6 +86,9 @@
 
 .cart-checkout {
   display: block;
+  @include u.breakpoint-up(large) {
+    width: 100%;
+  }
 }
 
 .cart-checkoutBtn {
@@ -92,11 +101,13 @@
   color: #fff;
   background-color: var(--orange);
   box-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.1);
+  @include u.breakpoint-up(large) {
+    width: 100%;
+  }
 }
 
 .cart-checkoutBtn:hover {
   transform: scale(1.05);
   background-color: hsl(26, 100%, 60%);
   transition: all 400ms ease-in-out;
-
 }
