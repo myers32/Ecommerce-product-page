@@ -3,6 +3,8 @@
 .mainContent {
   @include u.breakpoint-up(large) {
     display: flex;
+    align-items: center;
+    gap: 100px;
     padding: 0 1.5rem;
     max-width: 69.375rem;
     margin: 0 auto;

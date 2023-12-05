@@ -1,1 +1,1 @@
-{"version":3,"sources":["../app/scss/util/breakpoints.scss","../app/scss/components/mainContent.scss"],"names":[],"mappings":"AAeC,4BCbD,aAEI,YAAA,CACA,gBAAA,CACA,mBAAA,CACA,aAAA,CAAA","file":"mainContent.css"}
+{"version":3,"sources":["../app/scss/util/breakpoints.scss","../app/scss/components/mainContent.scss"],"names":[],"mappings":"AAeC,4BCbD,aAEI,YAAA,CACA,kBAAA,CACA,SAAA,CACA,gBAAA,CACA,mBAAA,CACA,aAAA,CAAA","file":"mainContent.css"}
