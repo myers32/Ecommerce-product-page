@@ -1,1 +1,1 @@
-{"version":3,"sources":["../app/scss/components/description.scss"],"names":[],"mappings":"AACE,wBACE,mBAAA,CACA,sBAAA,CAGF,oBACE,wBAAA,CACA,gBAAA,CACA,gBAAA,CACA,mBAAA,CACA,uBAAA,CAGF,mBACE,4BAAA,CAGF,gBACE,iBAAA,CACA,kBAAA","file":"description.css"}
+{"version":3,"sources":["../app/scss/components/description.scss","../app/scss/util/breakpoints.scss"],"names":[],"mappings":"AAGE,wBACE,mBAAA,CACA,sBAAA,CAGF,oBACE,wBAAA,CACA,gBAAA,CACA,gBAAA,CACA,mBAAA,CACA,uBAAA,CAGF,mBACE,4BAAA,CACA,eAAA,CAGF,gBACE,iBAAA,CACA,kBAAA,CCRH,4BDMC,gBAKI,gBAAA,CAAA","file":"description.css"}
