@@ -100,13 +100,14 @@
   font-weight: bold;
   color: #fff;
   background-color: var(--orange);
-  box-shadow: 0 0.1875rem 0.75rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 12px var(--orange);
   @include u.breakpoint-up(large) {
     width: 100%;
   }
 }
 
 .cart-checkoutBtn:hover {
+  box-shadow: 0 3px 24px var(--orange);
   transform: scale(1.05);
   background-color: hsl(26, 100%, 60%);
   transition: all 400ms ease-in-out;
