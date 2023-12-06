@@ -46,15 +46,22 @@
   }
 
   &__thumbnails {
+    position: relative;
     @include u.breakpoint-up(large) {
       display: flex;
       justify-content: space-between;
       padding-top: 2.1875rem;
 
       img {
+        position: relative;
         height: 5.5rem;
         width: 5.5rem;
         border-radius: 0.625rem;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+          transition: opacity 400ms ease;
+        }
       }
     }
   }
@@ -93,4 +100,8 @@
 
 .main {
   display: block;
+}
+
+.img-opacity {
+  opacity: 0.5;
 }
