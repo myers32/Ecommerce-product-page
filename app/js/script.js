@@ -54,8 +54,10 @@
 		images.forEach((thumbnail, index) => {
 			thumbnail.addEventListener("click", () => {
 				mainImages[currentIndex].classList.remove("main");
+				images[currentIndex].classList.remove("img-opacity");
 				currentIndex = index;
 				mainImages[currentIndex].classList.add("main");
+				images[currentIndex].classList.add("img-opacity");
 			});
 		});
 	};
