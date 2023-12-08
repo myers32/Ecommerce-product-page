@@ -37,6 +37,7 @@
 			});
 		};
 
+
 		const init = () => {
 			nextImage();
 			prevImage();
@@ -44,6 +45,22 @@
 
 		init();
 	};
+
+	const thumbnails = () => {
+		const images = document.querySelectorAll(".thumbnail-js");
+		const mainImages = document.querySelectorAll(".slider__images--image");
+		let currentIndex = 0;
+
+		images.forEach((thumbnail, index) => {
+			thumbnail.addEventListener("click", () => {
+				mainImages[currentIndex].classList.remove("main");
+				currentIndex = index;
+				mainImages[currentIndex].classList.add("main");
+			});
+		});
+	};
+
+	thumbnails();
 
 	const counter = () => {
 		let amount = 0;
