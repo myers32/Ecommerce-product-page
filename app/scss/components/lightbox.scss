@@ -58,11 +58,11 @@
     }
   }
   &__previous {
-    left: -8%;
+    left: -10%;
   }
 
   &__next {
-    right: -8%;
+    right: -10%;
   }
 
   &__thumbnails {
@@ -71,6 +71,12 @@
       max-height: 90px;
       border-radius: 10px;
       margin: 30px 0 0 20px;
+    }
+
+    img:hover {
+      cursor: pointer;
+      opacity: 0.5;
+      transition: all 400ms ease;
     }
   }
 }
