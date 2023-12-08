@@ -62,8 +62,6 @@
 		});
 	};
 
-	thumbnails();
-
 	const counter = () => {
 		let amount = 0;
 		let result = document.querySelector(".result-js");
@@ -217,9 +215,25 @@
 		toggleCart();
 	};
 
+	const lightBox = () => {
+		const openLightBox = document.querySelector(".openLightBox-js");
+		const lightBox = document.querySelector(".lightbox");
+		const closeLightBox = document.querySelector(".closeLightBox-js");
+
+		openLightBox.addEventListener("click", () => {
+			lightBox.classList.add("lightBox-active");
+		});
+
+		closeLightBox.addEventListener("click", () => {
+			lightBox.classList.remove("lightBox-active");
+		});
+	};
+	lightBox();
+
 	const init = () => {
 
 		slider();
+		thumbnails();
 		counter();
 		sideMenu();
 		cartDisplay();
