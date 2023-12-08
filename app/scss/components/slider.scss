@@ -2,7 +2,7 @@
 
 .slider {
   &__container {
-    max-width: 62.5rem;
+    width: 100%;
     position: relative;
     margin: auto;
 
@@ -12,6 +12,8 @@
   }
 
   &__images {
+    display: flex;
+    justify-content: center;
     &--image {
       display: none;
 
@@ -100,6 +102,7 @@
 
 .main {
   display: block;
+  cursor: pointer;
 }
 
 .img-opacity {
