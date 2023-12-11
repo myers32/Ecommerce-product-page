@@ -249,7 +249,24 @@
 					images[currentIndex].classList.add("lightbox-main");
 				});
 			};
+
+			const prevImage = () => {
+				const previous = document.querySelector(".lightbox-previousImage-js");
+
+				previous.addEventListener("click", () => {
+					images[currentIndex].classList.remove("lightbox-main");
+
+					if (currentIndex === 0) {
+						currentIndex = totalImages - 1;
+					} else {
+						currentIndex--;
+					};
+
+					images[currentIndex].classList.add("lightbox-main");
+				});
+			};
 			nextImage();
+			prevImage();
 		};
 		lightboxSlider();
 	};
