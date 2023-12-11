@@ -58,74 +58,70 @@ Basically after this project I feel that my javascript skills increased. I learn
 How to create a slider using css and javascript. Example: 
 ```
 const nextImage = () => {
-			const next = document.querySelector(".next-js");
+	const next = document.querySelector(".next-js");
 
-			next.addEventListener("click", () => {
-				images[currentIndex].classList.remove("main");
+		next.addEventListener("click", () => {
+			images[currentIndex].classList.remove("main");
 
-				if (currentIndex === totalImages - 1) {
-					currentIndex = 0;
-				} else {
-					currentIndex++;
-				}
+			if (currentIndex === totalImages - 1) {
+			currentIndex = 0;
+			} else {
+			currentIndex++;
+			}
 
-				images[currentIndex].classList.add("main");
+			images[currentIndex].classList.add("main");
 			});
-		};
+};
 ```
 
 How to render a HTML in certain conditions:
 ```
 const renderCartDisplay = () => {
-			const numberOfCartItems = Number(cartItems.textContent);
+	const numberOfCartItems = Number(cartItems.textContent);
 
-			if (numberOfCartItems === 0) {
-				cartContent.innerHTML =
-					`
-				<p style="font-weight: bold;">Your cart is empty.</p>
-				`;
+		if (numberOfCartItems === 0) {
+			cartContent.innerHTML =
+			`
+			<p style="font-weight: bold;">Your cart is empty.</p>
+			`;
 
-			} else if (numberOfCartItems > 0) {
-				cartContent.innerHTML =
-					`
-					<div class="cart-wrapper">
+		} else if (numberOfCartItems > 0) {
+			cartContent.innerHTML =
+			`
+			<div class="cart-wrapper">
+			<img src="images/image-product-1-thumbnail.jpg" alt="Product image" class="cart-image">
 
-					<img src="images/image-product-1-thumbnail.jpg" alt="Product image" class="cart-image">
+			<p class="cart-paragraph">Fall Limited Edition Sneakers $125.00 x ${numberOfCartItems} <strong class="cart-price">$${125 * numberOfCartItems}.00</strong></p>
 
-					<p class="cart-paragraph">Fall Limited Edition Sneakers $125.00 x ${numberOfCartItems} <strong class="cart-price">$${125 * numberOfCartItems}.00</strong></p>
+			<button class="cart-deleteBtn">
+			<img src="images/icon-delete.svg" alt="Product image" class="cart-deleteBtnImage">
+			</button>
+			</div>
 
-					<button class="cart-deleteBtn">
-					<img src="images/icon-delete.svg" alt="Product image" class="cart-deleteBtnImage">
-					</button>
-
-					</div>
-
-					<div class="cart-checkout">
-
-					<button class="cart-checkoutBtn">
-					Checkout
-					</button>
-
-					</div>
-					`;
-			};
+			<div class="cart-checkout">
+			<button class="cart-checkoutBtn">
+			Checkout
+			</button>
+			</div>
+			`;
 		};
+};
 ```
 How to use forEach loop and how to use it to aim all thumbnails items and display as a main image
 ```js
 const thumbnails = () => {
-		const images = document.querySelectorAll(".thumbnail-js");
-		const mainImages = document.querySelectorAll(".slider__images--image");
-		let currentIndex = 0;
+	const images = document.querySelectorAll(".thumbnail-js");
+	const mainImages = document.querySelectorAll(".slider__images--image");
+	let currentIndex = 0;
 
-		images.forEach((thumbnail, index) => {
-			thumbnail.addEventListener("click", () => {
-				mainImages[currentIndex].classList.remove("main");
-				currentIndex = index;
-				mainImages[currentIndex].classList.add("main");
-			});
+	images.forEach((thumbnail, index) => {
+	thumbnail.addEventListener("click", () => {
+	mainImages[currentIndex].classList.remove("main");
+	currentIndex = index;
+	mainImages[currentIndex].classList.add("main");
 		});
-	};
+	});
+};
 ```
 
 
