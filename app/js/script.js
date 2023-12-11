@@ -216,18 +216,21 @@
 	};
 
 	const lightBox = () => {
-		const openLightBox = document.querySelector(".openLightBox-js");
-		const lightBox = document.querySelector(".lightbox");
-		const closeLightBox = document.querySelector(".closeLightBox-js");
 
-		openLightBox.addEventListener("click", () => {
-			lightBox.classList.add("lightBox-active");
-		});
+		const openAndClose = () => {
+			const openLightBox = document.querySelector(".openLightBox-js");
+			const lightBox = document.querySelector(".lightbox");
+			const closeLightBox = document.querySelector(".closeLightBox-js");
 
-		closeLightBox.addEventListener("click", () => {
-			lightBox.classList.remove("lightBox-active");
-		});
+			openLightBox.addEventListener("click", () => {
+				lightBox.classList.add("lightBox-active");
+			});
 
+			closeLightBox.addEventListener("click", () => {
+				lightBox.classList.remove("lightBox-active");
+			});
+		};
+		openAndClose();
 
 		const lightboxSlider = () => {
 			const images = document.querySelector(".lightbox__images").children;
@@ -249,7 +252,7 @@
 					images[currentIndex].classList.add("lightbox-main");
 				});
 			};
-
+			nextImage();
 			const prevImage = () => {
 				const previous = document.querySelector(".lightbox-previousImage-js");
 
@@ -265,10 +268,26 @@
 					images[currentIndex].classList.add("lightbox-main");
 				});
 			};
-			nextImage();
 			prevImage();
 		};
 		lightboxSlider();
+
+		const openThumbnailImage = () => {
+			const lightBoxThumbnails = document.querySelectorAll(".lightbox-thumbnail-js");
+			const mainLightBoxImages = document.querySelectorAll(".lightbox__images--image");
+			let currentIndex = 0;
+
+			lightBoxThumbnails.forEach((thumbnail, index) => {
+				thumbnail.addEventListener("click", () => {
+					mainLightBoxImages[currentIndex].classList.remove("lightbox-main");
+					lightBoxThumbnails[currentIndex].classList.remove("img-opacity");
+					currentIndex = index;
+					mainLightBoxImages[currentIndex].classList.add("lightbox-main");
+					lightBoxThumbnails[currentIndex].classList.add("img-opacity");
+				});
+			});
+		};
+		openThumbnailImage();
 	};
 
 	const init = () => {
