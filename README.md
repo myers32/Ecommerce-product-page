@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://myers32.github.io/Ecommerce-product-page/)
+- View URL: (https://myers32.github.io/Ecommerce-product-page/)
 
 ## My process
 
