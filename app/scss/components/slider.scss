@@ -12,8 +12,11 @@
   }
 
   &__images {
-    display: flex;
-    justify-content: center;
+    @include u.breakpoint-up(large) {
+      display: flex;
+      justify-content: center;
+    }
+
     &--image {
       display: none;
 
