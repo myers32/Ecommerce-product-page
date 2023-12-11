@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Bookmark landing page, coded by myers32](https://myers32.github.io/Bookmark-landing-page/)
+- Solution URL: (https://myers32.github.io/Ecommerce-product-page/)
 
 ## My process
 
