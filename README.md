@@ -4,7 +4,7 @@
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Preview](#preview)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -26,7 +26,7 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
+### Preview
 - Desktop preview
   
 ![desktop-preview](https://github.com/myers32/Ecommerce-product-page/assets/122280628/9cafea54-b015-4fac-8d71-9dd93a012ca1)
