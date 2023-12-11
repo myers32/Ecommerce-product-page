@@ -27,7 +27,7 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
-![desktop-preview](![desktop-preview](https://github.com/myers32/Ecommerce-product-page/assets/122280628/9cafea54-b015-4fac-8d71-9dd93a012ca1)
+![desktop-preview](https://github.com/myers32/Ecommerce-product-page/assets/122280628/9cafea54-b015-4fac-8d71-9dd93a012ca1)
 
 
 ### Links
