@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- View the outcome. URL: (https://myers32.github.io/Ecommerce-product-page/)
+- View the outcome. URL: [Ecommerce-product-page](https://myers32.github.io/Ecommerce-product-page/)
 
 ## My process
 
