@@ -33,8 +33,8 @@ Users should be able to:
 
 - Mobile preview
 
-![mobile-design](https://github.com/myers32/Ecommerce-product-page/assets/122280628/6e326ed4-272a-45a0-851d-8f459d9a9bbe)
-![mobile-design-basket-filled](https://github.com/myers32/Ecommerce-product-page/assets/122280628/1bbcc045-6ff7-4f18-a60b-8a090c5c9ccb)
+	![mobile-design](https://github.com/myers32/Ecommerce-product-page/assets/122280628/6e326ed4-272a-45a0-851d-8f459d9a9bbe)
+	![mobile-design-basket-filled](https://github.com/myers32/Ecommerce-product-page/assets/122280628/1bbcc045-6ff7-4f18-a60b-8a090c5c9ccb)
 
 ### Links
 
