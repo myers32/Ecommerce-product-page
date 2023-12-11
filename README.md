@@ -116,9 +116,9 @@ const thumbnails = () => {
 
 	images.forEach((thumbnail, index) => {
 	thumbnail.addEventListener("click", () => {
-	mainImages[currentIndex].classList.remove("main");
-	currentIndex = index;
-	mainImages[currentIndex].classList.add("main");
+		mainImages[currentIndex].classList.remove("main");
+		currentIndex = index;
+		mainImages[currentIndex].classList.add("main");
 		});
 	});
 };
