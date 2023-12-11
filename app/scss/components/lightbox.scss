@@ -39,11 +39,13 @@
         border-radius: 20px;
       }
     }
+  }
 
+  &__buttons {
     a {
       cursor: pointer;
       position: absolute;
-      top: 46%;
+      top: 42%;
       color: white;
       font-weight: bold;
       font-size: 1.5rem;
@@ -56,13 +58,14 @@
       background-color: white;
       transition: all 400ms ease;
     }
-  }
-  &__previous {
-    left: -10%;
-  }
 
-  &__next {
-    right: -10%;
+    &--previous {
+      left: 26%;
+    }
+
+    &--next {
+      right: 26%;
+    }
   }
 
   &__thumbnails {
