@@ -53,63 +53,91 @@ Users should be able to:
 - Mobile-first workflow
   
 ### What I learned
+Basically after this project I feel that my javascript skills increased. I learned:
 
-I figured out how to access and change the .svg image color in CSS.
+How to create a slider using css and javascript. Example: 
+```
+const nextImage = () => {
+			const next = document.querySelector(".next-js");
 
-```css
-  path {
-    stroke: var(--softred);
-  }
+			next.addEventListener("click", () => {
+				images[currentIndex].classList.remove("main");
+
+				if (currentIndex === totalImages - 1) {
+					currentIndex = 0;
+				} else {
+					currentIndex++;
+				}
+
+				images[currentIndex].classList.add("main");
+			});
+		};
 ```
 
-I used keyframes for creating animation when fading in text at faqs section.
-
-```css
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translateY(u.rem(-10));
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+How to render a HTML in certain conditions:
 ```
+const renderCartDisplay = () => {
+			const numberOfCartItems = Number(cartItems.textContent);
 
-I learned forEach loop and used it to aim all accordion items and add some listener on click.
+			if (numberOfCartItems === 0) {
+				cartContent.innerHTML =
+					`
+				<p style="font-weight: bold;">Your cart is empty.</p>
+				`;
 
+			} else if (numberOfCartItems > 0) {
+				cartContent.innerHTML =
+					`
+					<div class="cart-wrapper">
+
+					<img src="images/image-product-1-thumbnail.jpg" alt="Product image" class="cart-image">
+
+					<p class="cart-paragraph">Fall Limited Edition Sneakers $125.00 x ${numberOfCartItems} <strong class="cart-price">$${125 * numberOfCartItems}.00</strong></p>
+
+					<button class="cart-deleteBtn">
+					<img src="images/icon-delete.svg" alt="Product image" class="cart-deleteBtnImage">
+					</button>
+
+					</div>
+
+					<div class="cart-checkout">
+
+					<button class="cart-checkoutBtn">
+					Checkout
+					</button>
+
+					</div>
+					`;
+			};
+		};
+```
+How to use forEach loop and how to use it to aim all thumbnails items and display as a main image
 ```js
-  const accordion = () => {
-    const faqs = document.querySelectorAll(".faqs__accordion--item");
+const thumbnails = () => {
+		const images = document.querySelectorAll(".thumbnail-js");
+		const mainImages = document.querySelectorAll(".slider__images--image");
+		let currentIndex = 0;
 
-    faqs.forEach(faq => {
-      faq.addEventListener("click", () => {
-        faq.classList.toggle("active");
-      });
-    });
-  };
+		images.forEach((thumbnail, index) => {
+			thumbnail.addEventListener("click", () => {
+				mainImages[currentIndex].classList.remove("main");
+				currentIndex = index;
+				mainImages[currentIndex].classList.add("main");
+			});
+		});
+	};
 ```
 
-I learned creating one function that initialize my all needed functions at once.
-
-```js
-  const init = () => {
-    menu();
-    changeUnderline();
-    changeDisplay();
-    accordion();
-  };
-```
 
 ### Continued development
-In the future I want to focus on learing how to create more advanced animations.
-Also I want to upgrade my knowledge in JS from beginner to more advanced. 
+In the near future I will learn more of JavaScript by creating small project. I haven't decided yet if I will upload them on my profile. For now I will mostly focus on Vanilla JavaScript to create a stable fundamental knowledge prior to jump into learning framework. That framework will probably be React which is the most popular JavaScript framework at the moment.
+Additionally I think that my HTML and CSS knowledge is satisfying me at this time, so my focus will go to the better understaning of JavaScript fundamentals.
 
 ### Useful resources
 
-- [CSS-Tricks](https://www.css-tricks.com) - This helped me a lot at creating this code. It has really interesting articles where everything I needed was explained in beginner friendly manner. I really enjoyed helping myself with this website when creating this code.
-
+- [CSS-Tricks](https://www.css-tricks.com) - This helped me a lot at creating this code. It has really interesting articles where everything I needed was explained in beginner friendly manner. I really enjoyed helping myself with this website when writing this code.
+- [Kurs-JavaScript](https://www.kursjs.pl/) - I also have to mention that page. It has really nice articles for people learning JavaScript. It is written in beginner friendly language with code snippets and examples that help you to understand certain things better. I found it really useful.
+  
 ## Author
 
 - [Dawid Osiński](https://github.com/myers32)
