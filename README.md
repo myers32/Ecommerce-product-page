@@ -1,4 +1,4 @@
-# Bookmark landing page solution
+# Ecommerce product page
 
 ## Table of contents
 
@@ -27,7 +27,8 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 
 ### Screenshot
-![desktop-preview](https://github.com/myers32/Bookmark-landing-page/assets/122280628/bd0cff59-d314-43c2-85a7-b11851bb4b58)
+![desktop-preview](![desktop-preview](https://github.com/myers32/Ecommerce-product-page/assets/122280628/9cafea54-b015-4fac-8d71-9dd93a012ca1)
+
 
 ### Links
 
