@@ -227,8 +227,32 @@
 		closeLightBox.addEventListener("click", () => {
 			lightBox.classList.remove("lightBox-active");
 		});
+
+
+		const lightboxSlider = () => {
+			const images = document.querySelector(".lightbox__images").children;
+			const totalImages = images.length;
+			let currentIndex = 0;
+
+			const nextImage = () => {
+				const next = document.querySelector(".lightbox-nextImage-js");
+
+				next.addEventListener("click", () => {
+					images[currentIndex].classList.remove("lightbox-main");
+
+					if (currentIndex === totalImages - 1) {
+						currentIndex = 0;
+					} else {
+						currentIndex++;
+					}
+
+					images[currentIndex].classList.add("lightbox-main");
+				});
+			};
+			nextImage();
+		};
+		lightboxSlider();
 	};
-	lightBox();
 
 	const init = () => {
 
@@ -238,6 +262,7 @@
 		sideMenu();
 		cartDisplay();
 		cart();
+		lightBox();
 	};
 	init();
 }
