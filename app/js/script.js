@@ -253,6 +253,7 @@
 				});
 			};
 			nextImage();
+
 			const prevImage = () => {
 				const previous = document.querySelector(".lightbox-previousImage-js");
 
@@ -290,6 +291,20 @@
 		openThumbnailImage();
 	};
 
+	const addOpacityToThumbnailImg = () => {
+		const lightBoxThumbnails = document.querySelectorAll(".lightbox-thumbnail-js");
+		const next = document.querySelector(".lightbox-nextImage-js");
+		let currentIndex = 0;
+
+		next.addEventListener("click", () => {
+			lightBoxThumbnails[currentIndex].classList.remove("img-opacity");
+
+			currentIndex = (currentIndex + 1) % lightBoxThumbnails.length;
+
+			lightBoxThumbnails[currentIndex].classList.add("img-opacity");
+		});
+	};
+
 	const init = () => {
 
 		slider();
@@ -299,6 +314,7 @@
 		cartDisplay();
 		cart();
 		lightBox();
+		addOpacityToThumbnailImg();
 	};
 	init();
 }
