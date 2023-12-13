@@ -303,6 +303,20 @@
 
 			lightBoxThumbnails[currentIndex].classList.add("img-opacity");
 		});
+
+		const previous = document.querySelector(".lightbox-previousImage-js");
+
+		previous.addEventListener("click", () => {
+			lightBoxThumbnails[currentIndex].classList.remove("img-opacity");
+
+			if (currentIndex === 0) {
+				currentIndex = lightBoxThumbnails.length - 1;
+			} else {
+				currentIndex = (currentIndex - 1) % lightBoxThumbnails.length;
+			}
+			
+			lightBoxThumbnails[currentIndex].classList.add("img-opacity");
+		});
 	};
 
 	const init = () => {
