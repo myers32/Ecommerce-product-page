@@ -126,13 +126,13 @@ const thumbnails = () => {
 
 
 ### Continued development
-In the near future I will learn more of JavaScript by creating small project. I haven't decided yet if I will upload them on my profile. For now I will mostly focus on Vanilla JavaScript to create a stable fundamental knowledge prior to jump into learning framework. That framework will probably be React which is the most popular JavaScript framework at the moment.
+In the near future I will learn more of JavaScript by creating small projects. I haven't decided yet if I will upload them on my profile. For now I will mostly focus on Vanilla JavaScript to create a stable fundamental knowledge prior to jump into learning framework. That framework will probably be React which is the most popular JavaScript framework at the moment.
 Additionally I think that my HTML and CSS knowledge is satisfying me at this time, so my focus will go to the better understaning of JavaScript fundamentals.
 
 ### Useful resources
 
 - [CSS-Tricks](https://www.css-tricks.com) - This helped me a lot at creating this code. It has really interesting articles where everything I needed was explained in beginner friendly manner. I really enjoyed helping myself with this website when writing this code.
-- [Kurs-JavaScript](https://www.kursjs.pl/) - I also have to mention that page. It has really nice articles for people learning JavaScript. It is written in beginner friendly language with code snippets and examples that help you to understand certain things better. I found it really useful. This page is in Polish.
+- [Kurs-JavaScript](https://www.kursjs.pl/) - I also have to mention that page. It has really nice articles for people learning JavaScript. It is written in beginner friendly language with code snippets and examples that help you to understand certain mechanisms better. I found it really useful. That page is in Polish.
   
 ## Author
 
