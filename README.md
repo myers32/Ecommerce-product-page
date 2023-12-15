@@ -55,7 +55,7 @@ Users should be able to:
 ### What I learned
 Basically after this project I feel that my javascript skills increased. I learned:
 
-How to create a slider using css and javascript. Example: 
+How to create a slider button that shows an image according to his index. Example: 
 ```
 const nextImage = () => {
 	const next = document.querySelector(".next-js");
